@@ -10,7 +10,8 @@ export default class App extends React.Component {
 		}
 	}
 
-  changeTitle = () => {
+  changeTitle = (value) => {
+   this.setState({title: value})
    console.log('hi')
   }
 
@@ -18,7 +19,7 @@ export default class App extends React.Component {
     return (
       <>
         <h1>{this.state.title}</h1>
-        <Toolbar />
+        <Toolbar changeTitle={this.changeTitle} />
       </>
     );
   }
