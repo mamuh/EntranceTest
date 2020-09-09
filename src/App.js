@@ -1,4 +1,5 @@
 import React from 'react';
+import Toolbar from './components/Toolbar'
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -11,6 +12,7 @@ export default class App extends React.Component {
     return (
       <>
         <h1>{this.state.title}</h1>
+        <Toolbar />
       </>
     );
   }
