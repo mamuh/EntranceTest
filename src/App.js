@@ -31,10 +31,9 @@ export default class App extends React.Component {
 	render() {
     return (
       <>
-        <Toolbar changeTitle={this.changeTitle} addNumber={this.addNumber} />
+        <Toolbar changeTitle={this.changeTitle} addNumber={this.addNumber} previousTitle={this.state.title} />
         <h1>{this.state.title}</h1>
         <NumberDisplay numbers={this.state.numbers} />
-        <Window />
       </>
     );
   }

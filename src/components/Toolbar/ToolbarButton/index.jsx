@@ -1,31 +1,26 @@
 import React, { Component } from 'react'
-import { Button, Test } from './styles';
+import { Button, Container } from './styles'
+import Window from '../../Window'
 
 export default class ToolbarButton extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     windowVisible: false
-  //   }
-  // }
-
   handleClick = () => {
     const { changeTitle, addNumber, setActiveButton, index, data } = this.props
-    changeTitle(index.toString())
+    changeTitle(index)
     addNumber(index)
     setActiveButton(data.name)
   }
 
   render() {
-    const { data, index, changeTitle } = this.props
+    const { data, index, changeTitle, previousTitle } = this.props
     return (
-      <Test>
-      <Button onClick={this.handleClick}>
-        <img src={data.src} alt={data.name} />
-      </Button>
-        {this.props.activeButton == data.name ? <div>hi!</div> : null }
-      </Test>
+      <Container>
+        <Button onClick={this.handleClick}>
+          <img src={data.src} alt={data.name} />
+        </Button>
+        {this.props.activeButton == data.name ? <Window previousTitle={previousTitle} /> : null }
+      </Container>
     )
   }
 
 }
+

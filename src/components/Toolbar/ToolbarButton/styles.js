@@ -26,9 +26,9 @@ export const Button = styled.button`
   }
 `
 
-export const Test = styled.div`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-width: 100%;
+
 `
