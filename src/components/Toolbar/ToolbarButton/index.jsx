@@ -2,17 +2,18 @@ import React, { Component } from 'react'
 import { Button, Test } from './styles';
 
 export default class ToolbarButton extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      windowVisible: true
-    }
-  }
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     windowVisible: false
+  //   }
+  // }
 
   handleClick = () => {
-    const { changeTitle, addNumber, index } = this.props
+    const { changeTitle, addNumber, setActiveButton, index, data } = this.props
     changeTitle(index.toString())
     addNumber(index)
+    setActiveButton(data.name)
   }
 
   render() {
@@ -22,7 +23,7 @@ export default class ToolbarButton extends Component {
       <Button onClick={this.handleClick}>
         <img src={data.src} alt={data.name} />
       </Button>
-      {this.state.windowVisible ? <div>hi!</div> : null }
+        {this.props.activeButton == data.name ? <div>hi!</div> : null }
       </Test>
     )
   }

@@ -4,7 +4,7 @@ export const Button = styled.button`
   display: inline-block;
   border-radius: 13px;
   margin: 0.2rem 0;
-  min-width: 50px;
+  min-width: 100%;
   height: 50px;
   outline: none;
   background: transparent;
@@ -29,4 +29,6 @@ export const Button = styled.button`
 export const Test = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  min-width: 100%;
 `

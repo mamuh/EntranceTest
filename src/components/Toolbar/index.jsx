@@ -3,6 +3,17 @@ import ToolbarButton from './ToolbarButton'
 import { Container } from './styles';
 
 export default class Toolbar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeButton: "",
+    }
+  }
+
+  setActiveButton = (buttonName) => {
+    this.setState({activeButton: buttonName})
+  }
+
   render() {
     // CHANGE THIS!! TEMPORARY
     const buttons = [
@@ -24,6 +35,8 @@ export default class Toolbar extends Component {
               data={button}
               changeTitle={this.props.changeTitle}
               addNumber={this.props.addNumber}
+              setActiveButton={this.setActiveButton}
+              activeButton={this.state.activeButton}
             />
           </li>
         ))}
