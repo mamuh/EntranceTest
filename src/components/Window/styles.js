@@ -3,10 +3,10 @@ import styled from 'styled-components'
 export const Container = styled.div`
   position: fixed;
   max-height: 120px;
-  width: 400px;
+  max-width: 400px;
   text-align: left;
   padding: 15px;
-  left: 80px;
+  left: 5rem;
   background: #f6f6f6;
   border-radius: 10px;
   overflow: hidden;

@@ -9,11 +9,12 @@ export default class Window extends Component {
         <p className="header">PREVIOUS TITLE</p>
         <p>{this.props.previousTitle}</p>
       </div>
-      <div className="section">
-        <p className="header">NUMBER ADDED</p>
-        <p>{this.props.number}</p>
-      </div>
      </Container>
     )
   }
 }
+
+      // <div className="section">
+      //   <p className="header">NUMBER ADDED</p>
+      //   <p>{this.props.number}</p>
+      // </div>

@@ -30,12 +30,20 @@ export default class App extends React.Component {
     })
   }
 
-	render() {
+  render() {
     return (
       <>
-        <Toolbar changeTitle={this.changeTitle} addNumber={this.addNumber} previousTitle={this.state.previousTitle} />
-        <h1>{this.state.title}</h1>
-        <NumberDisplay numbers={this.state.numbers} />
+        <Toolbar
+          changeTitle={this.changeTitle}
+          addNumber={this.addNumber}
+          previousTitle={this.state.previousTitle}
+          activeButton={this.state.activeButton}
+          setActiveButton={this.setActiveButton}
+        />
+        <div className="main">
+          <h1 id="main-title">{this.state.title}</h1>
+          <NumberDisplay numbers={this.state.numbers} />
+        </div>
       </>
     );
   }
