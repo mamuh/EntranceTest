@@ -11,11 +11,12 @@ export default function Toolbar(props) {
     { name: "landscape", src: "landscape.svg" },
     { name: "align", src: "align.svg" },
   ]
+
   return (
    <Container>
     <ul>
       {buttons.map((button, index) => (
-        <ToolbarButton index={index} data={button} />
+        <li><ToolbarButton index={index+1} data={button} /></li>
       ))}
     </ul>
    </Container>

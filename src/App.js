@@ -5,7 +5,8 @@ export default class App extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-		  title : "This is the first title : "
+		  title: "This is the first title : ",
+      number: 3,
 		}
 	}
 

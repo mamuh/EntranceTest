@@ -14,6 +14,7 @@ export default class ToolbarButton extends Component {
     return (
       <Button>
         <img src={data.src} alt={data.name} />
+        {index}
       </Button>
     )
   }
