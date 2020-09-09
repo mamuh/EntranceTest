@@ -8,6 +8,7 @@ export default class App extends React.Component {
 		super(props)
 		this.state = {
 		  title: "This is the first title : ",
+      previousTitle: "",
       currentNumber: "",
       numbers: [1,2,3],
 		}
@@ -15,6 +16,7 @@ export default class App extends React.Component {
 
   changeTitle = (value) => {
     this.setState({
+      previousTitle: this.state.title,
       title: this.state.title + value,
       currentNumber: this.state.number + value
     })
@@ -31,7 +33,7 @@ export default class App extends React.Component {
 	render() {
     return (
       <>
-        <Toolbar changeTitle={this.changeTitle} addNumber={this.addNumber} previousTitle={this.state.title} />
+        <Toolbar changeTitle={this.changeTitle} addNumber={this.addNumber} previousTitle={this.state.previousTitle} />
         <h1>{this.state.title}</h1>
         <NumberDisplay numbers={this.state.numbers} />
       </>

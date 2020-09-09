@@ -17,7 +17,7 @@ export default class ToolbarButton extends Component {
         <Button onClick={this.handleClick}>
           <img src={data.src} alt={data.name} />
         </Button>
-        {this.props.activeButton == data.name ? <Window previousTitle={previousTitle} /> : null }
+        {this.props.activeButton == data.name ? <Window previousTitle={previousTitle} number={index} /> : null }
       </Container>
     )
   }

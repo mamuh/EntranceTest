@@ -6,6 +6,7 @@ export default class Window extends Component {
     return (
      <Container>
       <p>Previous title: {this.props.previousTitle}</p>
+      <p>Number added: {this.props.number}</p>
      </Container>
     )
   }
