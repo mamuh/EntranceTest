@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const Button = styled.a`
+export const Container = styled.div`
   display: inline-block;
   border-radius: 13px;
   padding: 0.5rem 0;
@@ -9,10 +9,5 @@ export const Button = styled.a`
   background: transparent;
   color: white;
   border: 2px solid white;
-
-  ${props => props.primary && css`
-    background:white;
-    color: black;
-  `}
 `
 

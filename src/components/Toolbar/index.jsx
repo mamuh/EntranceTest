@@ -1,5 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
+import ToolbarButton from '../Button'
+import { Container } from './styles';
 
-export default function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+export default function Toolbar(props) {
+  const buttons = [
+    { name: "postit", src: "paper.svg" },
+    { name: "text", src: "text.svg" },
+    { name: "square", src: "square.svg" },
+    { name: "pencil", src: "draw.svg" },
+    { name: "landscape", src: "landscape.svg" },
+    { name: "align", src: "align.svg" },
+  ]
+  return (
+   <Container>
+    <ul>
+      {buttons.map((button, index) => (
+        <ToolbarButton index={index} data={button} />
+      ))}
+    </ul>
+   </Container>
+  )
 }

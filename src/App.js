@@ -8,6 +8,11 @@ export default class App extends React.Component {
 		  title : "This is the first title : "
 		}
 	}
+
+  changeTitle = () => {
+   console.log('hi')
+  }
+
 	render() {
     return (
       <>
