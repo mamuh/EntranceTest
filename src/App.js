@@ -11,7 +11,7 @@ export default class App extends React.Component {
 	}
 
   changeTitle = (value) => {
-   this.setState({title: value})
+   this.setState({number: value})
    console.log('hi')
   }
 
@@ -19,6 +19,7 @@ export default class App extends React.Component {
     return (
       <>
         <h1>{this.state.title}</h1>
+        <h4>{this.state.number}</h4>
         <Toolbar changeTitle={this.changeTitle} />
       </>
     );

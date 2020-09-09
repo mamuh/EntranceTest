@@ -10,9 +10,9 @@ export default class ToolbarButton extends Component {
   // }
 
   handleClick = () => {
-    const index = 4
+    const index = this.props.index
     const buttonName = this.props.data.name
-    this.props.changeTitle(buttonName)
+    this.props.changeTitle(index)
   }
 
   render() {
