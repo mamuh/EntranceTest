@@ -5,8 +5,14 @@ export default class Window extends Component {
   render() {
     return (
      <Container>
-      <p>Previous title: {this.props.previousTitle}</p>
-      <p>Number added: {this.props.number}</p>
+      <div className="section">
+        <p className="header">PREVIOUS TITLE</p>
+        <p>{this.props.previousTitle}</p>
+      </div>
+      <div className="section">
+        <p className="header">NUMBER ADDED</p>
+        <p>{this.props.number}</p>
+      </div>
      </Container>
     )
   }

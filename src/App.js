@@ -10,7 +10,7 @@ export default class App extends React.Component {
 		  title: "This is the first title : ",
       previousTitle: "",
       currentNumber: "",
-      numbers: [1,2,3],
+      numbers: [],
 		}
 	}
 
