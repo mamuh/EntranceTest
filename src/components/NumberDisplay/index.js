@@ -10,8 +10,10 @@ export default class NumberDisplay extends Component {
           {numbers.map((number, index) => (
             <li key={index}>
               <h4>{number}</h4>
-              <p>Previous title</p>
-              <p>{titlesArchive[index]}</p>
+              <div className="title-history">
+                <p className="header">Previous title</p>
+                <p>{titlesArchive[index]}</p>
+              </div>
             </li>
           ))}
         </ul>
