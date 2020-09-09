@@ -1,26 +1,40 @@
 import React from 'react';
 import Toolbar from './components/Toolbar'
+import Window from './components/Window'
+import NumberDisplay from './components/NumberDisplay'
 
 export default class App extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 		  title: "This is the first title : ",
-      number: 3,
+      currentNumber: "",
+      numbers: [1,2,3],
 		}
 	}
 
   changeTitle = (value) => {
-   this.setState({number: value})
-   console.log('hi')
+    this.setState({
+      title: this.state.title + value,
+      currentNumber: this.state.number + value
+    })
+  }
+
+  addNumber = (newNumber) => {
+    const numbersArray = this.state.numbers
+    numbersArray.push(newNumber)
+    this.setState({
+      numbers: numbersArray
+    })
   }
 
 	render() {
     return (
       <>
+        <Toolbar changeTitle={this.changeTitle} addNumber={this.addNumber} />
         <h1>{this.state.title}</h1>
-        <h4>{this.state.number}</h4>
-        <Toolbar changeTitle={this.changeTitle} />
+        <NumberDisplay numbers={this.state.numbers} />
+        <Window />
       </>
     );
   }

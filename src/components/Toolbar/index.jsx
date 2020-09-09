@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ToolbarButton from '../Button'
+import ToolbarButton from './ToolbarButton'
 import { Container } from './styles';
 
 export default class Toolbar extends Component {
@@ -18,11 +18,12 @@ export default class Toolbar extends Component {
      <Container>
       <ul>
         {buttons.map((button, index) => (
-          <li>
+          <li key={index}>
             <ToolbarButton
               index={index+1}
               data={button}
               changeTitle={this.props.changeTitle}
+              addNumber={this.props.addNumber}
             />
           </li>
         ))}

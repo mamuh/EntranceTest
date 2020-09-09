@@ -8,6 +8,10 @@ export const Container = styled.div`
   background: #f9fbfa;
   border: 2px solid white;
   box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
+  position: fixed;
+  left: 0;
+  top: 15vh;
+  z-index: 999;
 
   ul {
     padding: 0;
