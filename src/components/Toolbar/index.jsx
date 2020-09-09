@@ -3,17 +3,6 @@ import ToolbarButton from './ToolbarButton'
 import { Container } from './styles'
 
 export default class Toolbar extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      activeButton: "",
-    }
-  }
-
-  setActiveButton = (buttonName) => {
-    this.setState({activeButton: buttonName})
-  }
-
   render() {
     // CHANGE THIS!! TEMPORARY
     const buttons = [
@@ -25,7 +14,7 @@ export default class Toolbar extends Component {
       { name: "align", src: "align.svg" },
     ]
 
-    const { changeTitle, addNumber, previousTitle } = this.props
+    const { changeTitle, addNumber, updateArchive } = this.props
 
     return (
      <Container>
@@ -35,11 +24,9 @@ export default class Toolbar extends Component {
             <ToolbarButton
               index={index+1}
               data={button}
-              changeTitle={changeTitle}
+              updateArchive={updateArchive}
               addNumber={addNumber}
-              setActiveButton={this.setActiveButton}
-              activeButton={this.state.activeButton}
-              previousTitle={previousTitle}
+              changeTitle={changeTitle}
             />
           </li>
         ))}

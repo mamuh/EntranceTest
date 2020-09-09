@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
 import { Container } from './styles'
 
-export default class Toolbar extends Component {
+export default class NumberDisplay extends Component {
+  componentDidMount() {
+    console.log('hi')
+  }
+
   render() {
-    const { numbers } = this.props
+    const { numbers, titlesArchive } = this.props
     return (
       <Container>
         <ul>
           {numbers.map((number, index) => (
-            <h4 key={index}>{number}</h4>
+            <li key={index}>
+              <h4>{number}</h4>
+              <p>Previous title</p>
+              <p>{titlesArchive[index]}</p>
+            </li>
           ))}
         </ul>
       </Container>

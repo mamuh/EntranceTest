@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { Button, Container } from './styles'
-import Window from '../../Window'
 
 export default class ToolbarButton extends Component {
   handleClick = () => {
-    const { changeTitle, addNumber, setActiveButton, index, data } = this.props
-    changeTitle(index)
+    const { addNumber, index, updateArchive, changeTitle } = this.props
     addNumber(index)
-    setActiveButton(data.name)
+    changeTitle(index)
+    updateArchive(index)
   }
 
   render() {
@@ -17,10 +16,8 @@ export default class ToolbarButton extends Component {
         <Button onClick={this.handleClick}>
           <img src={data.src} alt={data.name} />
         </Button>
-        {this.props.activeButton == data.name ? <Window previousTitle={previousTitle} number={index} /> : null }
       </Container>
     )
   }
 
 }
-

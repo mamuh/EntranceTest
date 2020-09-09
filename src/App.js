@@ -8,17 +8,14 @@ export default class App extends React.Component {
 		super(props)
 		this.state = {
 		  title: "This is the first title : ",
-      previousTitle: "",
-      currentNumber: "",
+      titlesArchive: [],
       numbers: [],
 		}
 	}
 
   changeTitle = (value) => {
     this.setState({
-      previousTitle: this.state.title,
       title: this.state.title + value,
-      currentNumber: this.state.number + value
     })
   }
 
@@ -30,19 +27,27 @@ export default class App extends React.Component {
     })
   }
 
+  updateArchive = (title) => {
+    const lastTitle = this.state.title
+    const titlesArray = this.state.titlesArchive
+    titlesArray.push(lastTitle)
+    this.setState({
+      titlesArchive: titlesArray
+    })
+  }
+
   render() {
+    const { title, numbers, titlesArchive } = this.state
     return (
       <>
         <Toolbar
           changeTitle={this.changeTitle}
           addNumber={this.addNumber}
-          previousTitle={this.state.previousTitle}
-          activeButton={this.state.activeButton}
-          setActiveButton={this.setActiveButton}
+          updateArchive={this.updateArchive}
         />
         <div className="main">
-          <h1 id="main-title">{this.state.title}</h1>
-          <NumberDisplay numbers={this.state.numbers} />
+          <h1 id="main-title">{title}</h1>
+          <NumberDisplay numbers={numbers} titlesArchive={titlesArchive} />
         </div>
       </>
     );
