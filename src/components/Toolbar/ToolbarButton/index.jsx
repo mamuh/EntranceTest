@@ -5,8 +5,8 @@ export default class ToolbarButton extends Component {
   handleClick = () => {
     const { addNumber, index, updateArchive, changeTitle } = this.props
     addNumber(index)
-    changeTitle(index)
     updateArchive(index)
+    changeTitle(index)
   }
 
   render() {

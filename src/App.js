@@ -1,6 +1,5 @@
 import React from 'react';
 import Toolbar from './components/Toolbar'
-import Window from './components/Window'
 import NumberDisplay from './components/NumberDisplay'
 
 export default class App extends React.Component {
