@@ -21,20 +21,21 @@ export default class NumberDisplay extends Component {
     return (
       <Container>
         <ul>
-        <AnimatedList animation={"grow"}>
-          {numbers.map((number, index) => (
-            <li key={index}>
-              <DisplayItem
-                number={number}
-                titlesArchive={titlesArchive}
-                index={index}
-              />
-            </li>
-          ))}
-        </AnimatedList>
-        <div style={{ float:"left", clear: "both" }}
-          ref={(el) => { this.listEnd = el; }}>
-        </div>
+          <AnimatedList animation={"grow"}>
+            {numbers.map((number, index) => (
+              <li key={index}>
+                <DisplayItem
+                  number={number}
+                  titlesArchive={titlesArchive}
+                  index={index}
+                />
+              </li>
+            ))}
+          </AnimatedList>
+          <div
+            style={{ float:"left", clear: "both" }}
+            ref={(el) => { this.listEnd = el; }}>
+          </div>
         </ul>
       </Container>
     )
