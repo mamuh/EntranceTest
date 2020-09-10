@@ -9,5 +9,6 @@ export const Container = styled.div`
   @media only screen and (max-width: 800px) {
     margin: 0;
     padding-bottom: 12vh;
+    height: 95vh;
   }
 `

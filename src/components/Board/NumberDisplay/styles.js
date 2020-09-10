@@ -16,4 +16,8 @@ export const Container = styled.div`
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     border-radius: 5px;
   }
+
+  @media only screen and (max-width: 800px) {
+    height: 90%;
+  }
 `
