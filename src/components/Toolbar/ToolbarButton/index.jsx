@@ -10,7 +10,7 @@ export default class ToolbarButton extends Component {
   }
 
   render() {
-    const { data, index, changeTitle, previousTitle } = this.props
+    const { data, index } = this.props
     return (
       <Container>
         <Button onClick={this.handleClick}>

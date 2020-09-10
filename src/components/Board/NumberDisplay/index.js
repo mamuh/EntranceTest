@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Container } from './styles'
 import { AnimatedList } from 'react-animated-list'
-import { Scrollbars } from 'react-custom-scrollbars'
 import DisplayItem from './DisplayItem'
 
 export default class NumberDisplay extends Component {
