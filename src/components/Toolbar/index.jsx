@@ -4,7 +4,6 @@ import { Container } from './styles'
 
 export default class Toolbar extends Component {
   render() {
-    // CHANGE THIS!! TEMPORARY
     const buttons = [
       { name: "postit", src: "paper.svg" },
       { name: "text", src: "text.svg" },
