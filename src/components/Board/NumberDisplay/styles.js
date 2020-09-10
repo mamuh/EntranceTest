@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 90%;
+  height: 85%;
   overflow: scroll;
 
   ul {
     padding: 0;
-    padding-right: 10px;
+    padding-right: 15px;
   }
 
   li {

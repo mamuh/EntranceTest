@@ -6,7 +6,7 @@ export default class DisplayItem extends Component {
     const { number, titlesArchive, index } = this.props
     return (
       <Container>
-        <div className="left-number">
+        <div className={`left-number number-${number}`}>
           <h4>{number}</h4>
         </div>
         <div className="title-info">
