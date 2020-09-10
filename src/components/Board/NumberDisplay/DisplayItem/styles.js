@@ -28,7 +28,7 @@ export const Container = styled.div`
   .title-info {
     margin-left: 20px;
     padding: 5px 0;
-    max-width: 70%;
+    max-width: 90%;
     overlfow: hidden;
     .prev-title {
       text-overflow: ellipsis;
@@ -73,7 +73,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 800px) {
     .title-info {
-      margin-left: 7px;
+      margin: 0 7px;
     }
   }
 `
