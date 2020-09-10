@@ -14,4 +14,10 @@ export const Container = styled.div`
     margin: 0;
     margin-bottom: 5px;
   }
+
+  @media only screen and (max-width: 800px) {
+    h1 {
+      height: auto;
+    }
+  }
 `
