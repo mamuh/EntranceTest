@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   .left-number {
     background: #FAFAFA;
-    width: 60px;
+    min-width: 60px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -69,5 +69,11 @@ export const Container = styled.div`
   .number-6 {
     background: #e7f8e3;
     color: #94d176;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .title-info {
+      margin-left: 7px;
+    }
   }
 `

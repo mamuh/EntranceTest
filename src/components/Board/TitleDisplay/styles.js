@@ -5,6 +5,10 @@ export const Container = styled.div`
   overlfow: hidden;
   text-align: left;
   direction: rtl;
+  padding: 12px 20px 10px 20px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 2px 2px 7px rgba(0,0,0,0.1);
+  margin-bottom: 5px;
 
   h1 {
     width: 100%;
@@ -12,7 +16,6 @@ export const Container = styled.div`
     text-overflow: ellipsis;
     height: 90px;
     margin: 0;
-    margin-bottom: 5px;
   }
 
   @media only screen and (max-width: 800px) {
@@ -20,5 +23,7 @@ export const Container = styled.div`
       height: auto;
       margin-bottom: 10px;
     }
+    padding: 5px;
+    box-shadow: none;
   }
 `
