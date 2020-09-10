@@ -18,6 +18,7 @@ export const Container = styled.div`
   @media only screen and (max-width: 800px) {
     h1 {
       height: auto;
+      margin-bottom: 10px;
     }
   }
 `
