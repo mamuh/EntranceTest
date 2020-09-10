@@ -16,7 +16,7 @@ export default class ToolbarButton extends Component {
         <Button onClick={this.handleClick}>
           <img src={data.src} alt={data.name} />
         </Button>
-        <span class="tooltiptext">{index}</span>
+        <span className="tooltiptext">{index}</span>
       </Container>
     )
   }

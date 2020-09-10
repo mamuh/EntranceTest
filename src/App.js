@@ -44,7 +44,10 @@ export default class App extends React.Component {
           addNumber={this.addNumber}
           updateArchive={this.updateArchive}
         />
-        <Board title={title} numbers={numbers} titlesArchive={titlesArchive} />
+        <Board
+          title={title}
+          numbers={numbers}
+          titlesArchive={titlesArchive} />
       </>
     );
   }

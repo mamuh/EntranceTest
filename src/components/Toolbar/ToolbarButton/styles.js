@@ -8,7 +8,7 @@ export const Button = styled.button`
   height: 50px;
   outline: none;
   background: transparent;
-  color: black;
+  color: #000;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -22,7 +22,6 @@ export const Button = styled.button`
   img {
     width: 25px;
     height: 25px;
-
   }
 `
 
@@ -33,11 +32,10 @@ export const Container = styled.div`
   justify-content: flex-start;
 
   .tooltiptext {
-    background: red;
     visibility: hidden;
     width: 35px;
     opacity: 0.6;
-    background-color: black;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 5px 0;
