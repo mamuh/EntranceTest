@@ -61,4 +61,10 @@ export const Container = styled.div`
     border-style: solid;
     border-color: transparent black transparent transparent;
   }
+
+  @media only screen and (max-width: 800px) {
+    span.tooltiptext {
+      display: none;
+    }
+  }
 `

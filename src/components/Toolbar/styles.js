@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 4rem;
   background: #f9fbfa;
   border: 2px solid white;
-  box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
+  box-shadow: 1px 4px 5px rgba(0,0,0,0.15);
   position: fixed;
   left: 0;
   top: 15vh;
@@ -19,6 +19,27 @@ export const Container = styled.div`
 
   li {
     list-style: none;
+  }
+
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    top: 90vh;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: -1px -4px 5px rgba(0,0,0,0.15);
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    ul li {
+      list-style: inline;
+      float: left;
+    }
   }
 `
 

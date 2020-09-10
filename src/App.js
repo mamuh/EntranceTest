@@ -7,7 +7,7 @@ export default class App extends React.Component {
 		super(props)
 		this.state = {
 		  title: "This is the first title: ",
-      titlesArchive: ['aaaaaaa', 'bbbbbbbbb'],
+      titlesArchive: ['aaaaaaa', 'bbbbbbbbbakbdedgwedgihdqwhequgweuqgwqwegqwheqwekqegkg'],
       numbers: [1,2,3,4,5,6],
 		}
 	}

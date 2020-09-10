@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 0;
+  overlfow: hidden;
 
   .left-number {
     background: #FAFAFA;
@@ -17,6 +18,32 @@ export const Container = styled.div`
       padding: 0;
       margin: 0;
     }
+  }
+
+  p {
+    padding: 0;
+    margin: 2px;
+  }
+
+  .title-info {
+    margin-left: 20px;
+    padding: 5px 0;
+    max-width: 70%;
+    overlfow: hidden;
+    .prev-title {
+      text-overflow: ellipsis;
+      max-height: 100%;
+      overlfow: hidden;
+      width: 100%;
+      word-break: break-all;
+      font-size: 15px;
+    }
+  }
+
+  .header {
+    color: #D0D2D5;
+    font-size: 11px;
+    margin-bottom: 5px;
   }
 
   .number-1 {
@@ -43,25 +70,4 @@ export const Container = styled.div`
     background: #e7f8e3;
     color: #94d176;
   }
-
-  p {
-    padding: 0;
-    margin: 2px;
-  }
-
-  .title-info {
-    margin-left: 20px;
-    padding: 5px 0;
-  }
-
-  .header {
-    color: #D0D2D5;
-    font-size: 11px;
-    margin-bottom: 5px;
-  }
-
-  .prev-title {
-    font-size: 15px;
-  }
-
 `
