@@ -1,14 +1,14 @@
 import React from 'react';
 import Toolbar from './components/Toolbar'
-import NumberDisplay from './components/NumberDisplay'
+import Board from './components/Board'
 
 export default class App extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-		  title: "This is the first title : ",
-      titlesArchive: ["hi", "hey"],
-      numbers: [1,2],
+		  title: "This is the first title: ",
+      titlesArchive: ['aaaaaaa', 'bbbbbbbbb'],
+      numbers: [1,2,3,4,5,6,1,2,34,5,3,1,2,4,2],
 		}
 	}
 
@@ -44,10 +44,7 @@ export default class App extends React.Component {
           addNumber={this.addNumber}
           updateArchive={this.updateArchive}
         />
-        <div className="main">
-          <h1 id="main-title">{title}</h1>
-          <NumberDisplay numbers={numbers} titlesArchive={titlesArchive} />
-        </div>
+        <Board title={title} numbers={numbers} titlesArchive={titlesArchive} />
       </>
     );
   }

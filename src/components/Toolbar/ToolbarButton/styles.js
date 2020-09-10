@@ -27,8 +27,38 @@ export const Button = styled.button`
 `
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
+  .tooltiptext {
+    background: red;
+    visibility: hidden;
+    width: 35px;
+    opacity: 0.6;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    left: 4rem;
+    z-index: 1;
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+  }
 `
