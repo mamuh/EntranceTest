@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   ul {
     padding: 0;
-    padding-right: 15px;
+    padding-right: 9px;
   }
 
   li {
