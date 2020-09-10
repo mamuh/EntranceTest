@@ -26,7 +26,7 @@ export const Container = styled.div`
     align-items: center;
     top: auto;
     bottom: 0;
-    height: 80px;
+    height: 70px;
     width: 100%;
     border-radius: 0;
     box-shadow: -1px -4px 5px rgba(0,0,0,0.15);

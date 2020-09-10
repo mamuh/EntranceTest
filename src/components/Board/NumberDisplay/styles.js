@@ -18,6 +18,6 @@ export const Container = styled.div`
   }
 
   @media only screen and (max-width: 800px) {
-    height: 90%;
+    height: 80%;
   }
 `
